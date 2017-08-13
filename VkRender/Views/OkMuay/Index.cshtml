@@ -1,0 +1,77 @@
+﻿@using OkMuay.Vkontakte
+@model OkMuay.Vkontakte.Wall
+@{
+	Layout = null;
+	var wall = Model ?? new Wall();
+}	
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Школа Олега Кудринского</title>					   
+	<link rel='shortcut icon' href='/Letour.ico' />
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/StyleSheet.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="background" class="om-background">
+		<div id="bg1" class="om-background" style="background-color: black;"></div>
+		<div id="bg2" class="om-background" style="background-color: black;"></div>
+	</div>
+
+	<div class="row om-whole-area om-no-margin om-no-padding om-zero-index">
+		<nav class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
+			<ul class="container nav nav-pills">
+				<li><a class="om-big-text om-no-color" href="#">Тренировки</a></li>
+				<li><a class="om-big-text om-no-color" href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="visible-xs" style="margin-top:50px;"></div>
+		<div class="col-sm-offset-6 col-sm-6 col-md-offset-7 col-md-5 col-lg-offset-8 col-lg-4 om-full-height om-first-index om-no-padding om-relative">
+			<div class="om-minus-index om-wall-container"></div>
+			<div id="vkWall" class="om-wall om-first-index">
+				@Html.Raw(wall.Render())
+				@*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD*@
+			</div>
+		</div>
+		<div class="om-fixed-regalies hidden-xs" data-toggle="tooltip" data-placement="right" title="Чтобы стать чемпионом нужно ходить на тренировки!">
+
+			<h1>Среди учеников :</h1>
+			<ul>
+				<li>Чемпионы Мира</li>
+				<li>Чемпионы Европы</li>
+				<li>Чемпионы России</li>
+			</ul>
+		</div>
+		<div class="om-fixed-menu hidden-xs">
+			<div class="row om-no-margin om-no-padding">
+				<div class="col-sm-offset-1 col-sm-4 col-md-5 col-lg-6 om-no-padding">
+					<ul class="nav nav-pills">
+						<li style="float: left;"><a class="om-menu-item" href="/OkMuay/trainings">Тренировки</a></li>
+						<li style="float:right;"><a class="om-menu-item" href="/OkMuay/contact">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-offset-1 col-sm-6  col-md-5 col-lg-4 om-no-padding"></div>
+			</div>
+		</div>
+		@*<nav class="navbar navbar-default navbar-fixed-bottom visible-xs" role="navigation">
+				<ul class="container nav nav-pills">
+					<li><a class="om-big-text om-no-color" href="#">Тренировки</a></li>
+					<li><a class="om-big-text om-no-color" href="#">Контакты</a></li>
+				</ul>
+			</nav>*@
+		<div class="visible-xs" style="margin-bottom:50px;"></div>
+	</div>	 
+	
+	<div class="om-cover">
+		<div class="om-cover-outer"></div>
+		<div class="om-cover-inner"></div>
+	</div>
+
+	<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Scripts/respond.min.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>
+
+	<script src="~/Scripts/okMuay/mainPage.js"></script>
+</body>
+</html>

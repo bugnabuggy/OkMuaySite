@@ -1,0 +1,259 @@
+@font-face {
+  font-family: Molot;
+  src: url(fonts/Molot.otf);
+}
+@font-face {
+  font-family: Sports;
+  src: url("fonts/Sports World-Regular.otf"), url("fonts/Sports World-Regular.ttf");
+}
+@font-face {
+  font-family: Sofachrome;
+  src: url(fonts/Sofachrome.ttf);
+}
+@font-face {
+  font-family: Tinos;
+  src: url(fonts/Tinos.ttf);
+}
+@font-face {
+  font-family: Yanone;
+  src: url(fonts/Yanone.otf);
+}
+/*  COMMON   */
+.om-nowrap {
+  white-space: nowrap;
+}
+.om-cleaner {
+  clear: both;
+}
+.om-left {
+  float: left;
+}
+.om-right {
+  float: right;
+}
+.om-minus-index {
+  z-index: -1;
+}
+.om-zero-index {
+  z-index: 0;
+}
+.om-first-index {
+  z-index: 1;
+}
+.om-relative {
+  position: relative;
+}
+.om-whole-area {
+  height: 100%;
+  width: 100%;
+}
+.om-no-margin {
+  margin: 0;
+}
+.om-no-padding {
+  padding: 0;
+}
+.om-horizontal-padding {
+  padding: 0 10px;
+}
+.om-vertical-padding {
+  padding: 10px 0px;
+}
+.om-no-color {
+  color: inherit !important;
+}
+.om-full-height {
+  height: 100%;
+}
+.om-full-width {
+  width: 100%;
+}
+.om-center {
+  text-align: center;
+}
+.om-inline-block {
+  display: inline-block;
+}
+/*  MIXINS    */
+/*  CLEANER   */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+}
+/*   CSS Classes   */
+.om-background {
+  position: fixed;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+.om-fixed-regalies {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  height: 300px;
+  width: 350px;
+}
+.om-fixed-regalies ul,
+.om-fixed-regalies h1 {
+  list-style: none;
+  list-style-image: url("/Images/cup.png");
+  font-family: Yanone;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #faebd7;
+}
+.om-fixed-menu {
+  position: fixed;
+  top: 82%;
+  height: 50px;
+  width: 100%;
+  z-index: 0;
+}
+@media (max-height: 800px) {
+  .om-fixed-menu {
+    top: 70%;
+  }
+}
+@media (max-height: 600px) {
+  .om-fixed-menu {
+    top: 65%;
+  }
+}
+.om-menu-item {
+  font-family: Yanone;
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 6px;
+  padding: 0 15px;
+  margin: 2px 0;
+  color: white;
+  background-color: rgba(250, 235, 215, 0.5);
+}
+.om-wall-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #faebd7;
+  opacity: 0.8;
+}
+.om-wall {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  overflow: auto;
+}
+.om-wall-post {
+  margin: 15px 0;
+  padding: 5px;
+  border-radius: 10px;
+}
+.om-wall-post-header {
+  font-family: Yanone;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #faebd7;
+  color: inherit;
+}
+.om-wall-post-content {
+  text-align: justify;
+  font-size: large;
+}
+.om-content-video {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 2px 0;
+}
+.om-content-video img {
+  display: inline-block !important;
+}
+.om-content-video-timing {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.om-cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.om-cover-outer {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 0%;
+  height: 100%;
+  opacity: 0.85;
+  background-color: black;
+}
+.om-cover-inner {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+  top: 15%;
+  height: 70%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.om-info-background {
+  position: absolute;
+  min-width: 80%;
+  min-height: 80%;
+  right: 90%;
+  top: 10%;
+  left: 10%;
+  background-color: #faebd7;
+  padding: 5px 20px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .om-info-background {
+    min-width: 96%;
+    min-height: 96%;
+    right: 98%;
+    top: 2%;
+    left: 2%;
+  }
+}
+.om-headlines {
+  font-family: Yanone;
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #faebd7;
+  color: inherit;
+}
+.om-info-content {
+  margin: 15x 0;
+  text-align: justify;
+  font-size: large;
+}
