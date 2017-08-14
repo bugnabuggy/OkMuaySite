@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Net;
+using System.Web.Configuration;
 
 namespace OkMuay.Vkontakte
 {
@@ -11,7 +12,7 @@ namespace OkMuay.Vkontakte
     {
         private string mApiUrl = "https://api.vk.com/method/wall.get";
 	    private string mApiVersion = "";
-        private string mApiAccessToken = "";
+        private string mApiAccessToken = WebConfigurationManager.AppSettings["AccessToken"];
         public VkApi()
         {
 

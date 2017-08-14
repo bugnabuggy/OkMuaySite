@@ -254,6 +254,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\OkMuay\Trainings.cshtml" />
+    <None Include="secret.config" />
+    <Content Include="secret.config.test" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OkMuay.Vkontakte;
+using System.Web.Configuration;
 
 namespace OkMuay.Controllers
 {
@@ -13,7 +14,7 @@ namespace OkMuay.Controllers
         public ActionResult Index()
         {
 			var api = new VkApi();
-			var wall = api.GetWall("12343864");
+			var wall = api.GetWall(WebConfigurationManager.AppSettings["UserId"]);
             return View(wall);
         }
 
