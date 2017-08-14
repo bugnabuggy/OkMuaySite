@@ -11,6 +11,7 @@ namespace OkMuay.Vkontakte
     {
         private string mApiUrl = "https://api.vk.com/method/wall.get";
 	    private string mApiVersion = "";
+        private string mApiAccessToken = "";
         public VkApi()
         {
 
@@ -18,7 +19,7 @@ namespace OkMuay.Vkontakte
 
         public Wall GetWall(string userId)
         {
-            string query = string.Format("{0}?owner_id={1}&v={2}", mApiUrl, userId, mApiVersion);
+            string query = string.Format("{0}?owner_id={1}&access_token={2}&v={3}", mApiUrl, userId, mApiAccessToken, mApiVersion);
             var request = HttpWebRequest.Create(query);
             var responseData = string.Empty;
             using(var response = request.GetResponse())
