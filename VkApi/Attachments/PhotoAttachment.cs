@@ -7,6 +7,7 @@ using System.Web.UI;
 using Microsoft.Ajax.Utilities;
 using OkMuay.Vkontakte.Attachments;
 
+
 namespace OkMuay.Vkontakte
 {
 	public class PhotoAttachment:VkAttachment

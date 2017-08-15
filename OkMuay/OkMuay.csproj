@@ -43,10 +43,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.0.5007.14579, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=x86">
+      <HintPath>..\packages\AjaxMin.5.0.5007.14585\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -167,26 +170,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Vkontakte\Attachments\AlbumAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\AppAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\Attachment.cs" />
-    <Compile Include="Vkontakte\Attachments\AttachmentFactory.cs" />
-    <Compile Include="Vkontakte\Attachments\AudioAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\DocAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\GraffitiAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\LinkAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\NoteAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\PageAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\PhotoAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\PhotosListAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\PollAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\PostedPhotoAttachment.cs" />
-    <Compile Include="Vkontakte\Attachments\Utilities.cs" />
-    <Compile Include="Vkontakte\Attachments\VideoAttachment.cs" />
-    <Compile Include="Vkontakte\VkApi.cs" />
-    <Compile Include="Vkontakte\VkSerializer.cs" />
-    <Compile Include="Vkontakte\Wall.cs" />
-    <Compile Include="Vkontakte\WallPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BgPics\1gNstFY3KoA.jpg" />
@@ -266,6 +249,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VkApi\OkMuay.VkApi.csproj">
+      <Project>{dc154614-ddaf-43a3-96ef-cf5a00bcd34d}</Project>
+      <Name>OkMuay.VkApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
