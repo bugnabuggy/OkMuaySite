@@ -19,11 +19,15 @@ namespace OkMuay.Vkontakte
 
 	    public string Render()
 	    {
+            string userid = "id";
+            string club = "club";
 		    var result = new StringBuilder();
 		    foreach (var wallPost in Posts)
 		    {
+                string id = "";
+                id = OwnerId < 0 ?  club+OwnerId * (-1) : userid+OwnerId;
 			    result.Append("<div class='om-wall-post'"+"post-id="+ wallPost.Id +">");
-			    result.Append("<a href='https://vk.com/id"+ OwnerId+"?w=wall"+ OwnerId+"_"+wallPost.Id+"' target='_blank' class='om-wall-post-header'>");
+			    result.Append("<a href='https://vk.com/"+id+"?w=wall"+ OwnerId+"_"+wallPost.Id+"' target='_blank' class='om-wall-post-header'>");
 			    result.Append(wallPost.Date.ToString(new CultureInfo("ru-ru")));
 			    result.Append("</a>");
 				result.Append("<div class='om-wall-post-content'>");
