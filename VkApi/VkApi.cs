@@ -11,7 +11,7 @@ namespace OkMuay.Vkontakte
     public class VkApi
     {
         private string mApiUrl = "https://api.vk.com/method/wall.get";
-	    private string mApiVersion = "";
+	    private string mApiVersion = WebConfigurationManager.AppSettings["vkApiVersion"]?? "4.9";
         private string mApiAccessToken = WebConfigurationManager.AppSettings["AccessToken"];
         public VkApi()
         {
